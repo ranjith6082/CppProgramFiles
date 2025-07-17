@@ -1,0 +1,655 @@
+Patterns
+---------
+
+Why we study Patterns ? 
+-----------------------
+
+How to solve Pattern problems ? Problem 1,2,& 3
+-----------------------------------------------
+
+
+Pattern1
+
+Square Pattern
+--------------
+
+#include<bits/stdc++.h>
+#include <cmath>
+using namespace std;
+
+int main(){
+
+    int n = 4;
+    for(int i = 1;i <= n;i++){
+        for(int j=1;j<=n;j++){
+            cout<<j<<" ";
+        }
+        cout<< endl;
+    }
+    return 0;
+}
+
+output
+1 2 3 4 
+1 2 3 4 
+1 2 3 4 
+1 2 3 4 
+
+
+Pattern2
+
+
+#include<bits/stdc++.h>
+#include <cmath>
+using namespace std;
+
+int main(){
+
+    int n = 4;
+    for(int i = 1;i <= n;i++){
+        for(int j=1;j<=n;j++){
+            cout<<"* ";
+        }
+        cout<< endl;
+    }
+    return 0;
+}
+
+
+output
+* * * * 
+* * * * 
+* * * * 
+* * * * 
+
+
+
+#include<bits/stdc++.h>
+#include <cmath>
+using namespace std;
+
+int main(){
+
+    int n = 4;
+    for(int i = 0;i < n;i++){
+        for(int j=0;j<n;j++){
+            cout<<"* ";
+        }
+        cout<< endl;
+    }
+    return 0;
+}
+
+
+output
+* * * * 
+* * * * 
+* * * * 
+* * * * 
+
+
+Pattern3
+
+#include<bits/stdc++.h>
+#include <cmath>
+using namespace std;
+
+int main(){
+
+    int n = 4;
+    for(int i = 0;i < n;i++){
+        char ch = 'A';
+        for(int j=0;j<n;j++){
+            cout<<ch;
+            ch++;
+        }
+        cout<< endl;
+    }
+    return 0;
+}
+
+output
+
+ABCD
+ABCD
+ABCD
+ABCD
+
+
+Practice Problem 4 & 5
+-----------------------
+
+Pattern4
+
+#include<bits/stdc++.h>
+#include <cmath>
+using namespace std;
+
+int main(){
+
+    int n = 4;
+    int num = 1;
+    for(int i = 0;i < n;i++){
+        for(int j=0;j<n;j++){
+            cout<<num<<" ";
+            num++;
+        }
+        cout<< endl;
+    }
+    return 0;
+}
+
+output
+1 2 3 4 
+5 6 7 8 
+9 10 11 12 
+13 14 15 16 
+
+
+Pattern5
+
+#include<bits/stdc++.h>
+#include <cmath>
+using namespace std;
+
+int main(){
+
+    int n = 4;
+    char ch = 'A';
+    for(int i = 0;i < n;i++){
+        for(int j=0;j<n;j++){
+            cout<<ch<<" ";
+            ch++;
+        }
+        cout<< endl;
+    }
+    return 0;
+}
+
+output
+A B C D 
+E F G H 
+I J K L 
+M N O P 
+
+
+
+Problem 6 : Triangle Patterns
+------------------------------
+Pattern6
+
+#include<bits/stdc++.h>
+#include <cmath>
+using namespace std;
+
+int main(){
+
+    int n = 4;
+    for(int i = 0;i < n;i++){
+        for(int j=0;j<i+1;j++){ //i+1
+            cout<<"*"<<" ";
+        }
+        cout<< endl;
+    }
+    return 0;
+}
+
+output
+* 
+* * 
+* * * 
+* * * * 
+
+
+Problem 7 & 8
+-------------
+
+Pattern7
+
+#include<bits/stdc++.h>
+#include <cmath>
+using namespace std;
+
+int main(){
+
+    int n = 4;
+    for(int i = 0;i < n;i++){
+        for(int j=0;j<i+1;j++){
+            cout<<(i+1)<<" ";
+        }
+        cout<< endl;
+    }
+    return 0;
+}
+
+output
+1 
+2 2 
+3 3 3 
+4 4 4 4 
+
+
+Pattern8
+
+#include<bits/stdc++.h>
+#include <cmath>
+using namespace std;
+
+int main(){
+
+    int n = 4;
+    char ch = 'A';
+    for(int i = 0;i < n;i++){
+        for(int j=0;j<i+1;j++){
+            cout<<ch<<" ";
+        }
+        ch++;
+        cout<< endl;
+    }
+    return 0;
+}
+
+output
+A 
+B B 
+C C C 
+D D D D 
+
+
+Problem 9
+---------
+
+Pattern9
+
+
+#include<bits/stdc++.h>
+#include <cmath>
+using namespace std;
+
+int main(){
+
+    int n = 4;
+    for(int i = 0;i < n;i++){
+        for(int j=1;j<=i+1;j++){
+            cout<<j<<" ";
+        }
+        cout<< endl;
+    }
+    return 0;
+}
+
+output
+1 
+1 2 
+1 2 3 
+1 2 3 4 
+
+
+
+Problem 10 : Reverse triangle pattern
+-------------------------------------
+Pattern10
+
+#include<bits/stdc++.h>
+#include <cmath>
+using namespace std;
+
+int main(){
+
+    int n = 5;
+    for(int i = n;i> 0;i--){
+        cout<<i<<" ";
+    }
+    return 0;
+}
+
+output
+5 4 3 2 1 
+
+
+#include<bits/stdc++.h>
+#include <cmath>
+using namespace std;
+
+int main(){
+
+    int n = 4;
+    for(int i=0;i<n;i++){
+        for(int j=i+1;j>0;j--){
+            cout<<j<<" ";
+        }
+        cout<<endl;
+    }
+    return 0;
+}
+
+output
+1 
+2 1 
+3 2 1 
+4 3 2 1 
+
+
+
+#include<bits/stdc++.h>
+#include <cmath>
+using namespace std;
+
+int main(){
+
+    int n = 4;
+
+    char ch = 'A';
+    for(int i=0;i<n;i++){
+        for(char c=ch;c >= 'A';c--){
+            cout<<c<<" ";
+        }
+        ch++;
+        cout<<endl;
+    }
+    return 0;
+}
+
+output
+A 
+B A 
+C B A 
+D C B A 
+
+
+
+Problem 11 & 12 : Floyd's Triangle Pattern
+-------------------------------------------
+
+Pattern11
+
+#include<bits/stdc++.h>
+#include <cmath>
+using namespace std;
+
+int main(){
+
+    int n = 4;
+    int num = 1;
+    for(int i=0;i<n;i++){
+        for(int j=0;j<i+1;j++){
+            cout<<num<<" ";
+            num++;
+        }
+        cout<<endl;
+    }
+    return 0;
+}
+
+output
+1 
+2 3 
+4 5 6 
+7 8 9 10 
+
+
+#include<bits/stdc++.h>
+#include <cmath>
+using namespace std;
+
+int main(){
+
+    int n = 4;
+
+    int num=1;
+    for(int i=0;i<n;i++){
+        for(int j=i+1;j>0;j--){
+            cout<<num<<" ";
+            num++;
+        }
+        cout<<endl;
+    }
+    return 0;
+}
+
+output
+1 
+2 3 
+4 5 6 
+7 8 9 10 
+
+
+Pattern12
+
+#include<bits/stdc++.h>
+#include <cmath>
+using namespace std;
+
+int main(){
+
+    int n = 4;
+
+    char ch = 'A';
+    for(int i=0;i<n;i++){
+        for(int j=0;j<i+1;j++){
+            cout<<ch<<" ";
+            ch++;
+        }
+        cout<<endl;
+    }
+    return 0;
+}
+
+output
+A 
+B C 
+D E F 
+G H I J 
+
+
+Problem 13 Inverted triangle pattern
+-------------------------------------
+
+Pattern13
+
+#include<bits/stdc++.h>
+#include <cmath>
+using namespace std;
+
+int main(){
+
+    int n = 4;
+
+    for(int i=0;i<n;i++){
+        for(int j = 0;j<i;j++){
+            cout << " ";
+        }
+        for(int j=0;j<n-i;j++){
+            cout<<(i+1);
+        }
+        cout << endl;
+    }
+    return 0;
+}
+
+output
+1111
+ 222
+  33
+   4
+   
+   
+
+#include<bits/stdc++.h>
+#include <cmath>
+using namespace std;
+
+int main(){
+
+    int n = 4;
+
+    char ch = 'A';
+    for(int i=0;i<n;i++){
+        for(int j = 0;j<i;j++){
+            cout << " ";
+        }
+        for(int j=0;j<n-i;j++){
+            cout<<ch;
+        }
+        ch++;
+        cout << endl;
+    }
+    return 0;
+}
+
+
+output
+AAAA
+ BBB
+  CC
+   D
+   
+   
+Problem 14 : Pyramid pattern
+----------------------------
+
+Pattern14
+
+
+#include<bits/stdc++.h>
+#include <cmath>
+using namespace std;
+
+int main(){
+
+    int n = 4;
+
+    for(int i=0;i<n;i++){
+        for(int j=0;j<n-i-1;j++){
+            cout<<" ";
+        }
+        for(int j=1;j<=i+1;j++){
+            cout<<j;
+        }
+        for(int j=i;j>0;j--){
+            cout<<j;
+        }
+        cout<<endl;
+    }
+    return 0;
+}
+
+
+output
+   1
+  121
+ 12321
+1234321
+
+
+
+Problem 15 : Hollow Diamond Pattern
+-----------------------------------
+Pattern15
+
+
+#include<bits/stdc++.h>
+#include <cmath>
+using namespace std;
+
+int main(){
+
+    int n = 4;
+
+    for(int i=0;i<n;i++){
+        for(int j =0;j<n-i-1;j++){
+            cout<<" ";
+        }
+        cout<<"*";
+        if(i != 0){
+            for(int j=0;j<2*i-1;j++){
+                cout<<" ";
+            }
+            cout<<"*";
+        }
+        cout<<endl;
+    }
+
+    for(int i=0;i<n-1;i++){
+        for(int j=0;j<i+1;j++){
+            cout<<" ";
+        }
+        cout<<"*";
+        if(i != n-2){
+            for(int j=0;j<2*(n-i-2)-1;j++){
+                cout<<" ";
+            }
+            cout<<"*";
+        }
+        cout<<endl;
+    }
+    return 0;
+}
+
+
+output
+   *
+  * *
+ *   *
+*     *
+ *   *
+  * *
+   *
+
+
+Problem 16 : Butterly Pattern (h.w)
+-----------------------------------
+
+Pattern16
+
+
+#include<bits/stdc++.h>
+#include <cmath>
+using namespace std;
+
+int main(){
+
+    int n = 4;
+
+    for(int i=0;i<n;i++){
+        for(int j=0;j<i+1;j++){
+            cout<<"*";
+        }
+        for(int j=0;j<2*(n-i)-2;j++){
+            cout<<" ";
+        }
+        for(int j=0;j<i+1;j++){
+            cout<<"*";
+        }
+        cout<<endl;
+    }
+
+    for(int i=0;i<n;i++){
+        for(int j=0;j<n-i;j++){
+            cout<<"*";
+        }
+        for(int j=0;j<2*i;j++){
+            cout<<" ";
+        }
+        for(int j=0;j<n-i;j++){
+            cout<<"*";
+        }
+        cout<<endl;
+    }
+    return 0;
+}
+
+
+output
+
+*      *
+**    **
+***  ***
+********
+********
+***  ***
+**    **
+*      *
+
+
+-----------------------------------------------------------------------------------------------------
