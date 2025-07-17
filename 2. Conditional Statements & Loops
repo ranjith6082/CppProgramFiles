@@ -1,0 +1,767 @@
+Conditional Statements & Loops
+------------------------------
+
+Introduction
+------------
+
+Conditional Statements (if-else)
+--------------------------------
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+
+    int n = 45;
+    if(n >= 0){
+        cout << "n is positive";
+    }
+    return 0;
+}
+
+output
+n is positive
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+
+    int n = -45;
+    if(n >= 0){
+        cout << "n is positive";
+    }
+    return 0;
+}
+
+
+output
+no output display
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+
+    int n = -45;
+    if(n >= 0){
+        cout << "n is positive";
+    }else{
+        cout << "n is negative";
+    }
+    return 0;
+}
+
+
+output
+n is negative
+
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+
+    int age;
+    cout<< "enter age: ";
+    cin >> age;
+
+    if(age >= 18){
+        cout<<"you can vote";
+    }else{
+        cout<<"you can't vote";
+    }
+    return 0;
+}
+
+input
+25
+
+output
+you can vote
+
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+
+    int n;
+    cout<< "enter number: ";
+    cin >> n;
+
+    if(n % 2 == 0){
+        cout<<"even";
+    }else{
+        cout<<"odd";
+    }
+    return 0;
+}
+
+input
+25
+
+output
+odd
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+
+    int n;
+    cout<< "enter number: ";
+    cin >> n;
+
+    if(n % 2 == 0){
+        cout<<"even\n";
+        cout<<"bye\n";
+    }else{
+        cout<<"odd";
+    }
+    return 0;
+}
+
+input
+26
+
+output
+even
+bye
+
+
+else if
+-------
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+
+    int marks;
+    cout<< "enter marks: ";
+    cin >> marks;
+
+    if(marks >= 90){
+        cout<< "A";
+    }else if(marks >= 80 && marks < 90){
+        cout<<"B";
+    }else{
+        cout<<"C";
+    }
+    return 0;
+}
+
+input
+82
+
+output
+B
+
+
+Practice Qs
+------------
+
+Find character lowercase or uppercase
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+
+    char ch;
+    cout<< "enter char: ";
+    cin >> ch;
+
+    if(ch >= 'a' && ch <= 'z'){
+        cout<< "lowercase";
+    }else{
+        cout<<"uppercase";
+    }
+    return 0;
+}
+
+input 
+T
+
+output
+uppercase
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+
+    char ch;
+    cout<< "enter char: ";
+    cin >> ch;
+
+    if(ch >= 65 && ch <= 90){
+        cout<< "uppercase";
+    }else{
+        cout<<"lowercase";
+    }
+    return 0;
+}
+
+input
+t
+
+
+output
+lowercase
+
+
+
+Ternary Operator / Statement
+----------------------------
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+
+    int n = 45;
+    cout << (n >=0 ?"positive" : "negative") << endl;
+    return 0;
+}
+
+output
+positive
+
+
+
+Loops
+------
+
+while Loops
+-------------
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+
+    int count = 1;
+    while(count <= 5){
+        cout << count<<" ";
+        count++;
+    }
+    return 0;
+}
+
+output
+1 2 3 4 5 
+
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+
+    int n = 10;
+    int count = 1;
+    while(count <= n){
+        cout << count<<" ";
+        count++;
+    }
+    return 0;
+}
+
+
+output
+1 2 3 4 5 6 7 8 9 10 
+
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+
+    int n = 10;
+    int count = 1;
+    while(count <= n){
+        cout << count<<" ";
+        //count++;
+    }
+    return 0;
+}
+
+
+output
+1 1 1 1 1 1 1 1 1 1 1 ------------------
+
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+
+    int n = 10;
+    int i = 1;
+    while(i <= n){
+        cout << i<<" ";
+        i++;
+    }
+    return 0;
+}
+
+output
+1 2 3 4 5 6 7 8 9 10 
+
+
+for Loops
+---------
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+
+    int n = 10;
+    for(int i=1;i <= n;i++){
+        cout<< i << " ";
+    }
+    return 0;
+}
+
+
+output
+1 2 3 4 5 6 7 8 9 10 
+
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+
+    int n = 10;
+    for(int i=1,j=1;i <= n || j <= n;i++,j++){
+        cout<<i << " ";
+        cout<< j << " ";
+    }
+    return 0;
+}
+
+
+output
+1 1 2 2 3 3 4 4 5 5 6 6 7 7 8 8 9 9 10 10 
+
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+
+    int n = 10;
+    for(int i=1;i <= n ;i=i+2){
+        cout<<i << " ";
+    }
+    return 0;
+}
+
+
+output
+1 3 5 7 9 
+
+
+
+Practice Qs
+------------
+
+Sum of numbers from 1 to n
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+
+    int n = 5;
+    int sum = 0;
+    for(int i=1;i <= n ;i++){
+        sum += i;
+    }
+    cout<<"sum = "<<sum<<endl;
+    return 0;
+}
+
+output
+sum = 15
+
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+
+    int n = 50;
+    int sum = 0;
+    for(int i=1;i <= n ;i++){
+        sum += i;
+        if(i == 5){
+            break;
+        }
+    }
+    cout<<"sum = "<<sum<<endl;
+    return 0;
+}
+
+
+output
+sum = 15
+
+
+
+sum of all odd numbers from 1 to n
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+
+    int n = 5;
+    int oddSum = 0;
+    for(int i=1;i <= n ;i++){
+        if(i % 2 != 0){
+            oddSum += i;
+        }
+    }
+    cout<<"oddSum = "<<oddSum<<endl;
+    return 0;
+}
+
+
+output
+oddSum = 9
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+
+    int i=1;
+    int n = 5;
+    int oddSum = 0;
+
+    while(i <= n){
+        if(i % 2 != 0){
+            oddSum += i;
+        }
+        i++;
+    }
+    cout<<"oddSum = "<<oddSum<<endl;
+    return 0;
+}
+
+output
+oddSum = 9
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+
+    int n = 5;
+    int evenSum = 0;
+    for(int i=1;i <= n ;i++){
+        if(i % 2 == 0){
+            evenSum += i;
+        }
+    }
+    cout<<"evenSum = "<<evenSum<<endl;
+    return 0;
+}
+
+
+output
+evenSum = 6
+
+
+do while Loop
+-------------
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+
+    do{
+        cout<<"Hello World";
+    }while(3 > 5);
+    return 0;
+}
+
+output
+Hello World
+
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+
+    int i=1;
+    int n=10;
+
+    do{
+        cout<<i << " ";
+        i++;
+    }while(i <= n);
+    return 0;
+}
+
+output
+1 2 3 4 5 6 7 8 9 10 
+
+
+
+Practice Qs
+------------
+
+Check if a number is prime or not.
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+
+    int n = 14;
+    bool isPrime = true;
+    for(int i=2;i <= n-1;i++){
+        if(n%i==0){
+            isPrime = false;
+            break;
+        }
+    }
+    if(isPrime == true){
+        cout<<"prime no";
+    }else{
+        cout<<"non prime no";
+    }
+    return 0;
+}
+
+
+output
+non prime no
+
+
+#include<bits/stdc++.h>
+#include <cmath>
+using namespace std;
+
+int main(){
+
+    int n = 7;
+    bool isPrime = true;
+    for(int i=2;i <= sqrt(n);i++){
+        if(n%i==0){
+            isPrime = false;
+            break;
+        }
+    }
+    if(isPrime == true){
+        cout<<"prime no";
+    }else{
+        cout<<"non prime no";
+    }
+    return 0;
+}
+
+output
+prime no
+
+
+
+
+Nested loops
+-------------
+
+#include<bits/stdc++.h>
+#include <cmath>
+using namespace std;
+
+int main(){
+
+    for(int i=1;i<=5;i++){
+        cout<<"*****"<<endl;
+    }
+    return 0;
+}
+
+
+output
+*****
+*****
+*****
+*****
+*****
+
+
+#include<bits/stdc++.h>
+#include <cmath>
+using namespace std;
+
+int main(){
+
+    int x = 10;
+    for(int i=1;i<=x;i++){
+        cout<<"*";
+    }
+    return 0;
+}
+
+output
+**********
+
+
+#include<bits/stdc++.h>
+#include <cmath>
+using namespace std;
+
+int main(){
+
+    int n = 5;
+    for(int i=1;i<=n;i++){
+        int m = 10;
+        for(int j=1;j<=m;j++){
+            cout<<"*";
+        }
+        cout<<endl;
+    }
+    return 0;
+}
+
+output
+**********
+**********
+**********
+**********
+**********
+
+
+
+Summary & Homework
+-------------------
+
+Sum of all numbers from 1 to N which are divisible by 3.
+
+#include<bits/stdc++.h>
+#include <cmath>
+using namespace std;
+
+int main(){
+
+    int n = 10;
+    int sum = 0;
+    for(int i=1;i<=n;i++){
+       if(i%3==0){
+            sum+=i;
+       }
+    }
+    cout<<"sum = "<<sum<<endl;
+    return 0;
+}
+
+output
+sum = 18
+
+
+
+#include<bits/stdc++.h>
+#include <cmath>
+using namespace std;
+
+int main(){
+
+    int n = 10;
+    int i=1;
+    int sum = 0;
+    
+    while(i<=n){
+        if(i%3==0){
+            sum+=i;
+       }
+       i++;
+    }
+
+    cout<<"sum = "<<sum<<endl;
+    return 0;
+}
+
+
+output
+sum = 18
+
+
+
+Print factorial of a number N
+
+
+#include<bits/stdc++.h>
+#include <cmath>
+using namespace std;
+
+int main(){
+
+    int n = 4;
+    int fact = 1;
+    
+    for(int i=1;i<=n;i++){
+        fact *= i;
+    }
+
+    cout<<"Factorial = "<<fact<<endl;
+    return 0;
+}
+
+output
+Factorial = 24
+
+
+
+#include<bits/stdc++.h>
+#include <cmath>
+using namespace std;
+
+int main(){
+
+    int n = 4;
+    int i=1;
+    int fact = 1;
+    
+    while(i<=n){
+        fact *= i;
+        i++;
+    }
+
+    cout<<"Factorial = "<<fact<<endl;
+    return 0;
+}
+
+output
+Factorial = 24
+
+
+
+
+
