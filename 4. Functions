@@ -1,0 +1,590 @@
+Functions
+---------
+
+Introduction
+-------------
+
+What are Functions?
+-------------------
+
+#include<bits/stdc++.h>
+#include <cmath>
+using namespace std;
+
+//function definition
+void printHello(){
+    cout << "hello\n";
+}
+
+int main(){
+
+    //function call / invoke
+    printHello();
+    printHello();
+    printHello();
+    return 0;
+}
+
+output
+hello
+hello
+hello
+
+
+#include<bits/stdc++.h>
+#include <cmath>
+using namespace std;
+
+//function definition
+int printHello(){
+    cout << "hello\n";
+    return 3;
+}
+
+int main(){
+
+    //function call / invoke
+    int val = printHello();
+    cout<<"val = "<<val<<endl;
+    return 0;
+}
+
+
+output
+hello
+val = 3
+
+
+
+#include<bits/stdc++.h>
+#include <cmath>
+using namespace std;
+
+//function definition
+int printHello(){
+    cout << "hello\n";
+    return 3;
+}
+
+int main(){
+
+    //function call / invoke
+    cout<<printHello()<<endl;
+    return 0;
+}
+
+output
+hello
+3
+
+
+#include<bits/stdc++.h>
+#include <cmath>
+using namespace std;
+
+//sumof 2 numbers
+int sum(int a, int b){
+    int s = a + b;
+    return s;
+}
+
+int main(){
+
+    //function call / invoke
+    cout<<sum(10,5)<<endl;
+    return 0;
+}
+
+output
+15
+
+
+
+#include<bits/stdc++.h>
+#include <cmath>
+using namespace std;
+
+//sumof 2 numbers
+double sum(double a, double b){
+    double s = a + b;
+    return s;
+}
+
+int main(){
+
+    //function call / invoke
+    cout<<sum(10.99,5.65)<<endl;
+    return 0;
+}
+
+output
+16.64
+
+Parameters & Arguments
+-----------------------
+
+#include<bits/stdc++.h>
+#include <cmath>
+using namespace std;
+
+//min of 2 numbers
+
+int minOfTwo(int a,int b){	//parameters
+    if(a<b){
+        return a;
+    }
+    else{
+        return b;
+    }
+}
+
+
+int main(){
+
+    //function call / invoke
+    cout<<"min = "<<minOfTwo(5,3)<<endl; //arguments
+    return 0;
+}
+
+output
+min = 3
+
+Practice Qs1
+------------
+calculate sum of numbers from 1 to N
+
+#include<bits/stdc++.h>
+#include <cmath>
+using namespace std;
+
+
+int sumN(int n){
+    int sum = 0;
+    for(int i=1; i<=n; i++){
+        sum += i;
+    }
+    return sum;
+}
+
+
+int main(){
+
+    //function call / invoke
+    cout<<"sum = "<<sumN(5)<<endl;
+    return 0;
+}
+
+output
+sum = 15
+
+
+Practice Qs2
+-------------
+
+calculate N factorial
+
+#include<bits/stdc++.h>
+#include <cmath>
+using namespace std;
+
+int factorialN(int n){
+    int fact = 1;
+    for(int i = 1; i <= n; i++){
+        fact *= i;
+    }
+    return fact;
+}
+
+
+int main(){
+
+    //function call / invoke
+    cout<<"factorial = "<<factorialN(4)<<endl;
+    return 0;
+}
+
+output
+factorial = 24
+
+
+Functions in Memory
+--------------------
+
+#include<bits/stdc++.h>
+#include <cmath>
+using namespace std;
+
+void fun(){
+    int x = 25;
+    cout<<"x = "<<x<<endl;
+}
+
+
+int main(){
+
+    fun();
+    cout<<x<<endl;// This will cause an error because x is not defined in this scope
+    return 0;
+}
+
+output
+error
+
+
+#include<bits/stdc++.h>
+#include <cmath>
+using namespace std;
+
+int fun(){
+    return 2;
+    cout<<"hello"<<endl;// This line will never be executed
+}
+
+
+int main(){
+
+    fun();
+    return 0;
+}
+
+output
+empty
+
+
+
+#include<bits/stdc++.h>
+#include <cmath>
+using namespace std;
+
+void fun(int a,int b){
+    if(a> b){
+        cout << "hello" << endl;
+        return;
+    } else {
+        cout << "world" << endl;
+    }
+    cout<<"thank you!!!"<<endl;
+    
+}
+
+
+int main(){
+
+    fun(10,5);
+    return 0;
+}
+
+output
+hello
+
+
+Pass by Value
+---------------
+
+#include<bits/stdc++.h>
+#include <cmath>
+using namespace std;
+
+
+int sum(int a,int b){
+    a = a + 10;
+    b = b + 10;
+    return a+b;
+}
+
+int main(){
+    int a = 5, b = 4;
+    cout<<"sum = "<<sum(a,b)<<endl;
+    cout<<"a = "<<a<<endl;
+    cout<<"b = "<<b<<endl;
+    
+    return 0;
+}
+
+
+
+output
+sum = 29
+a = 5
+b = 4
+
+
+
+#include<bits/stdc++.h>
+#include <cmath>
+using namespace std;
+
+
+void changeX(int x){
+    x=2*x;
+    cout<<"x = "<<x<<endl;
+}
+
+int main(){
+    int x = 5;
+    changeX(x);
+    cout<<"x = "<<x<<endl;
+    
+    return 0;
+}
+
+
+
+output
+x = 10
+x = 5
+
+
+Practice Qs3
+-------------
+
+calculate sum of digits of a number
+
+#include<bits/stdc++.h>
+#include <cmath>
+using namespace std;
+
+
+int sumOfDigits(int num){
+    int digSum=0;
+
+    while(num > 0){
+        int lastDigit = num % 10;
+        digSum += lastDigit;
+        num /= 10;
+    }
+    return digSum;
+}
+
+int main(){
+    cout<<"sum = "<<sumOfDigits(2356)<<endl;
+    
+    return 0;
+}
+
+
+
+output
+sum = 16
+
+
+
+Practice Qs4
+------------
+
+calculate nCr binomial coefficient for n & r
+
+#include<bits/stdc++.h>
+#include <cmath>
+using namespace std;
+
+
+int factorial(int n){
+    int fact = 1;
+    for(int i = 1; i <= n; i++){
+        fact *= i;
+    }
+    return fact;
+}
+
+int nCr(int n, int r){
+    int fact_n = factorial(n);
+    int fact_r = factorial(r);
+    int fact_n_r = factorial(n - r);
+    int nCr = fact_n / (fact_r * fact_n_r);
+    return nCr;
+}
+
+int main(){
+    int n=8, r=2;
+
+    cout << "nCr = " << nCr(n,r) << endl;
+    
+    return 0;
+}
+
+
+
+output
+nCr = 28
+
+
+Summary & Homework
+-------------------
+
+1. WAF to check if a number is prime or not.
+
+#include<bits/stdc++.h>
+#include <cmath>
+using namespace std;
+
+
+bool primeOrNot(int n){
+    bool flag = true;
+    for(int i=2;i<=sqrt(n);i++){
+        if(n%i==0){
+            flag=false;
+            break;
+        }
+    }
+    return flag;
+}
+
+
+int main(){
+    int n = 7;
+    bool isPrime = primeOrNot(n);
+    if(isPrime){
+        cout << n << " is a prime number." << endl;
+    } else {
+        cout << n << " is not a prime number." << endl;
+    }
+    
+    return 0;
+}
+
+output
+7 is a prime number.
+
+
+
+2. WAF to print all prime numbers from 1 to N.
+
+#include<bits/stdc++.h>
+#include <cmath>
+using namespace std;
+
+
+bool primeOrNot(int n){
+    bool flag = true;
+    for(int i=2;i<=sqrt(n);i++){
+        if(n%i==0){
+            flag=false;
+            break;
+        }
+    }
+    return flag;
+}
+
+
+int main(){
+    int n=5;
+    for(int i=2;i<=n;i++){
+        if(primeOrNot(i)){
+            cout<<i<<" ";
+        }
+    }
+    
+    return 0;
+}
+
+
+output
+2 3 5 
+
+
+
+3. WAF to print nth Fibonacci.
+
+#include<bits/stdc++.h>
+#include <cmath>
+using namespace std;
+
+
+int fibonacciN(int n){
+    int first = 0;
+    int last = 1;
+    if(n == 0) return first;
+    if(n == 1) return last;
+    int ans = 0;
+    for(int i = 2; i <= n; i++){
+        ans = first + last;
+        first = last;
+        last = ans;
+    }
+    return ans;
+
+}
+
+
+int main(){
+    
+    int n=4;
+    int result = fibonacciN(n);
+    cout<<"FibinocciN = "<<result<<endl;
+    return 0;
+}
+
+
+
+output
+FibinocciN = 3
+
+
+
+switch statement
+----------------
+
+
+#include <iostream>
+#include <stdlib.h>
+using namespace std;
+
+int main() {
+
+    // Switch variable for 
+    // operation choice
+    char c;
+
+    // Operands
+    int x, y;
+
+    cout << "Enter the two numbers: ";
+    cin >> x >> y;
+
+    cout << "Enter the Operator (+,-,*,/)\nEnter any other to "
+            "exit\n";
+    cin >> c;
+
+    // switch case with operation for each operator
+    switch (c) {
+    case '+':
+        cout << x << " + " << y << " = " << x + y << endl;
+        break;
+
+    case '-':
+        cout << x << " - " << y << " = " << x - y << endl;
+        break;
+
+    case '*':
+        cout << x << " * " << y << " = " << x * y << endl;
+        break;
+    case '/':
+        cout << x << " / " << y << " = " << x / y << endl;
+        break;
+    default:
+        printf("Exiting\n");
+    }
+
+    return 0;
+}
+
+
+input
+10
+5
+-
+
+
+output
+Enter the two numbers: Enter the Operator (+,-,*,/)
+Enter any other to exit
+10 - 5 = 5
+
+
+
+--------------------------------------------------------------------------------------------------------
+
+
+
+
