@@ -652,4 +652,54 @@ output
 *      *
 
 
+
+Pattern17
+---------
+
+#include<bits/stdc++.h>
+#include <cmath>
+using namespace std;
+
+
+int main(){
+
+    int n = 5;
+
+    for(int i=0;i<n;i++){
+        for(int j=0;j<n-i-1;j++){
+            cout<<" ";
+        }
+        for(int j=0;j<2*i+1;j++){
+            cout<<(j+1);
+        }
+        cout<<endl;
+    }
+    n=n-1;
+
+    for(int i=0;i<n;i++){
+        for(int j=0;j<i+1;j++){
+            cout<<" ";
+        }
+        for(int j=0;j<2*(n-i)-1;j++){
+            cout<<j+1;
+        }
+        cout<<endl;
+    }
+    return 0;
+}
+
+
+output
+    1
+   123
+  12345
+ 1234567
+123456789
+ 1234567
+  12345
+   123
+    1
+	
+
+
 -----------------------------------------------------------------------------------------------------
